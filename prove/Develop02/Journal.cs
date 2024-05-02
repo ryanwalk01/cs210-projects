@@ -18,7 +18,7 @@ public class Journal {
         Console.WriteLine("Saving Entries...");
         using (StreamWriter outfile = new StreamWriter(file)) {
             foreach (Entry entry in _entries) {
-                outfile.WriteLine($"{entry._date},{entry._promptText},{entry._entryText}");
+                outfile.WriteLine($"{entry._date},{entry._time},{entry._promptText},{entry._entryText}");
             }
         }
         Console.WriteLine("Entries Saved.");
@@ -34,8 +34,9 @@ public class Journal {
 
             Entry newEntry = new Entry();
             newEntry._date = parts[0];
-            newEntry._promptText = parts[1];
-            newEntry._entryText = parts[2];
+            newEntry._time = parts[1];
+            newEntry._promptText = parts[2];
+            newEntry._entryText = parts[3];
 
             _entries.Add(newEntry);
         }

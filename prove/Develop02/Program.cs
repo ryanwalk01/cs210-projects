@@ -1,6 +1,7 @@
 using System;
 using System.Xml.Linq;
 
+// For extra creativity, I added time data to the journal entries; not just the date. 
 class Program
 {
     static void Main(string[] args)
@@ -43,12 +44,14 @@ class Program
 
                     DateTime currentTime = DateTime.Now;
                     string date = currentTime.ToShortDateString();
+                    string time = currentTime.ToShortTimeString();
 
                     entry._date = date;
+                    entry._time = time;
                     entry._promptText = prompts.GetRandomPrompt();
 
                     Console.WriteLine("\nPlease press enter when finished writing.\n");
-                    Console.WriteLine(entry._date);
+                    Console.WriteLine($"{entry._date} {entry._time}");
                     Console.WriteLine(entry._promptText);
                     entry._entryText = Console.ReadLine();
 
