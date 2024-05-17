@@ -1,3 +1,5 @@
+// No duplicate prompts/questions are selected per session. Until the program is restarted, an activity becomes inaccessible after all prompts/questions for that activity have been used. 
+
 using System;
 
 class Program

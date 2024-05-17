@@ -1,9 +1,7 @@
-// No duplicate prompts/questions are selected per session. Until the program is restarted, an activity becomes inaccessible after all prompts/questions for that activity have been used. 
 public class Activity {
     protected string _name;
     protected string _description;
     protected int _duration;
-    protected int _timesRun;
 
     public Activity() {
         _name = "Activity_name";
