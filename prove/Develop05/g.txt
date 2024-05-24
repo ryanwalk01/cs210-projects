@@ -1,0 +1,5 @@
+133540
+SimpleGoal:Sleep,tonight,15,True
+EternalGoal:Read,scriptures,100
+ChecklistGoal:Temple,go to,9999,123456,2,2
+HabitGoal:phone,doom scrolling,-30
